@@ -19,8 +19,8 @@ steps:
     java-version: '11'
     distribution: 'adopt'
 - name: Start SUT
-run: java -jar ./artifacts/app-ibank-build-for-testers.jar &
+  run: java -jar ./artifacts/app-ibank-build-for-testers.jar &
 - name: Chmod
-run: chmod +x gradlew
+  run: chmod +x gradlew
 - name: Headless test
-run: ./gradlew test --info -Dselenide.headless=true
+  run: ./gradlew test --info -Dselenide.headless=true
