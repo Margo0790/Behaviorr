@@ -19,7 +19,7 @@ jobs:
          java-version: '11'
          distribution: 'adopt'
      - name: Start SUT
-       run: java -jar ./artifacts/app-ibank-build-for-testers.jar -port 7777 &
+       run: java -jar ./artifacts/app-ibank-build-for-testers.jar -port=7777 &
      - name: Chmod
        run: chmod +x gradlew
      - name: Headless test
